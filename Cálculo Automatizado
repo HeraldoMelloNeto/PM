@@ -1,1 +1,10 @@
 pip install nibabel
+import nibabel as nib
+import numpy as np
+import matplotlib.pyplot as plt
+nifti_file = "C:\Users\heral\OneDrive\Imagens\AI X-LEME\Índice de Parkinsonismo Cálculo PM automatizado\100114830\T1\ni"
+img = nib.load(nifti_file)
+data = img.get_fdata()
+print(f"x: {192}, y: {512}, z: {512}")
+median_slice_idx = data.shape[2] // 2
+median_slice_idx = 98
